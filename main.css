@@ -1,0 +1,172 @@
+html, body {
+  min-height: 100vh;
+  color: #d6d6d6;
+}
+
+body {
+  background-color: #000000;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.displayName{
+font-size: 64px;
+color: aliceblue;
+}
+.emptyList{
+  color: #686868b2;
+  font-size: 40px;
+}
+
+#emptyList{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+#emptyList1 {
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+.card-header{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+#form{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+.form-group{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+.form-control{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+#emailHelp{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+.btn{
+  background-color: rgb(123, 3, 3);
+  color: rgb(227, 168, 168);
+}
+.card-body{
+  background-color: #000000;
+  border-radius: 4px;
+  border-color: white;
+}
+
+
+
+
+
+
+
+
+
+.headText{
+  text-align: center;
+  color: #6d6d6d;
+}
+.aside {
+  height: 400px;
+}
+.main {
+  height: 400px;
+}
+.d-flex {
+  display: flex;
+}
+.task-title {
+  font-weight: 400;
+  padding-top: 5px;
+}
+.gray {
+  color: #242424;
+}
+.task-title--done {
+  text-decoration: line-through;
+  color: #242424;
+}
+.task-item__buttons {
+  display: flex;
+  column-gap: 5px;
+}
+.notify-holder {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.empty-list__title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.empty-list__icon {
+  color: #42BE2A;
+  font-size: 32px;
+}
+.btn-action {
+    background-color: #242424;
+    padding: 8px 10px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-action:hover {
+    background-color: #710b0b;
+    opacity: 1;
+}
+
+.btn-action img {
+  pointer-events: none;
+}
+
+.none {
+  display: none !important;
+}
+
+.float-right {
+  float: right;
+}
+.copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 30px;
+  /* position: absolute; */
+  /* bottom: 30px; */
+  /* left: 0; */
+  /* right: 0; */
+}
+.love{
+  color: rgb(0, 120, 120);
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.kill{
+  color: rgb(87, 0, 3);
+  font-size: 40px;
+}
