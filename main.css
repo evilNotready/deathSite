@@ -17,6 +17,7 @@ color: aliceblue;
 .emptyList{
   color: #686868b2;
   font-size: 40px;
+  
 }
 
 #emptyList{
@@ -94,7 +95,7 @@ color: aliceblue;
 }
 .task-title--done {
   text-decoration: line-through;
-  color: #242424;
+  color: #ff0000;
 }
 .task-item__buttons {
   display: flex;

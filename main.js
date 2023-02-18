@@ -48,27 +48,41 @@ form.addEventListener('submit', function (event) {
     tasksList.insertAdjacentHTML('beforeend', taskHTML)
 
 
-//теперь после того как вводишь имя, убирается курсор(фокус) с поля ввода и там внутри остается текст, надо это исправить
-//очищаем поле ввода
-taskInput.value = ""; //после этого очищается поле ввода от того что мы вводили
-taskInput.focus() //метод фокус возвращает фокус на поле ввода
+    //теперь после того как вводишь имя, убирается курсор(фокус) с поля ввода и там внутри остается текст, надо это исправить
+    //очищаем поле ввода
+    taskInput.value = ""; //после этого очищается поле ввода от того что мы вводили
+    taskInput.focus() //метод фокус возвращает фокус на поле ввода
 
 
-//делаем проверку которая смотрит есть ли какие то имена, если они есть - убирает "все пока живы"
-if(tasksList.children.length > 1) {
-    emptyList.classList.add('none') //если колличество имен больше чем 1 то надпись пока все живы убирается через css .none display: none
-}
+    //делаем проверку которая смотрит есть ли какие то имена, если они есть - убирает "все пока живы"
+    if (tasksList.children.length > 1) {
+        emptyList.classList.add('none') //если колличество имен больше чем 1 то надпись пока все живы убирается через css .none display: none
+    }
 })
 //теперь надо сделать кнопку удаления имени.. Если тыкаешь на обычный крест, то имя удаляется
-tasksList.addEventListener('click', function deleteTask(event){
-//делаем условие, если то - куда мы нажали содержит delete, то к этому элементу мы и обращаемся
+tasksList.addEventListener('click', function deleteTask(event) {
+    //делаем условие, если то - куда мы нажали содержит delete, то к этому элементу мы и обращаемся
     if (event.target.dataset.action === 'delete') {
-        console.log("хуй");
-        let parenNode = event.target.closest("li") //ищем через оператора closest кто родитель снаружи и даем ему переменную, чтобы потом - 
-        parenNode.remove() //убрать
+        // console.log("хуй");
+        let parentNode = event.target.closest("li") //ищем через оператора closest кто родитель снаружи и даем ему переменную, чтобы потом - 
+        parentNode.remove() //убрать
     }
-//теперь надо сделать так чтобы после удаления имени, возвращалась обратно надпись (пока все живы)
-    if(tasksList.children.length === 1) {
-        emptyList.classList.remove('none') 
+    //теперь надо сделать так чтобы после удаления имени, возвращалась обратно надпись (пока все живы)
+    if (tasksList.children.length === 1) {
+        emptyList.classList.remove('none')
+    }
+})
+
+
+
+
+//теперь надо сделать кнопку убийства имени.. Если тыкаешь на дьявольский крест - имя перечеркивается и становится красным 
+tasksList.addEventListener('click', function doneTask(event){
+    // console.log('pizda');
+    if (event.target.dataset.action === 'done'){
+        // console.log('ddd');
+        let parentNode = event.target.closest("li") 
+        let taskTitle = parentNode.querySelector('.task-title')
+        taskTitle.classList.toggle('task-title--done')
     }
 })
